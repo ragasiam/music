@@ -44,7 +44,7 @@ $('.active-box').hover(function(){
 });
 
 var audioMp3 = new Audio();
-audioMp3.src = 'http://www.qingli.life/music/Beyond_Jupiter.mp3';
+audioMp3.src = 'http://uk1.internet-radio.com:8251/stream';
 
 function playAudio(){
 	audioMp3.play();
