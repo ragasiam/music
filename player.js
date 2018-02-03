@@ -4,7 +4,7 @@ TweenMax.fromTo('.loading-image', 2, {scale:1, autoAlpha:1}, {scale:0.75, autoAl
 TweenMax.to('#inner-circ', 2, {rotation:360, transformOrigin:'50% 50%', repeat:-1});
 TweenMax.to('#outer-circ', 4, {rotation:-360, transformOrigin:'50% 50%', repeat:-1});
 
-$('.ragasiamsvg').hover(function(){
+$('.audiosvg').hover(function(){
 	hoverCircle = $(this).find('#hover-circle .st4')
 	$(hoverCircle).css({'fill': '#7691BA'});
   TweenMax.to('.play-text', 0.35, {autoAlpha: 1, y:-70, transformOrigin:'50% 50%', ease:Back.easeOut});
@@ -13,8 +13,8 @@ $('.ragasiamsvg').hover(function(){
   TweenMax.to('.play-text', 0.35, {autoAlpha: 0, y:0, transformOrigin:'50% 50%', ease:Back.easeIn});
 });
 
-$('.ragasiamsvg').click(function(){
-	var spinDisc = $(this).find('#svg-ragasiam');
+$('.audiosvg').click(function(){
+	var spinDisc = $(this).find('#svg-audio');
 	var rippleCircle = $(this).find('#ripple-circle circle');
 	var activeBox = $(this).prev();
 	TweenMax.set(spinDisc, {rotation:0, transformOrigin:'50% 50%'});
@@ -27,7 +27,7 @@ $('.ragasiamsvg').click(function(){
 
 $('.active-box').click(function(){
 	$(this).hide();
-	TweenMax.killTweensOf($(this).next().find('#svg-ragasiam'));
+	TweenMax.killTweensOf($(this).next().find('#svg-audio'));
 	TweenMax.killTweensOf($(this).next().find('#ripple-circle circle'));
 	TweenMax.set('#ripple-circle circle', {scale:0.5, transformOrigin:'50% 50%'});
   TweenMax.set('.play-text', {autoAlpha: 0, y:0, transformOrigin:'50% 50%'});
