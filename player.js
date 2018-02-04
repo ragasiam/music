@@ -43,7 +43,7 @@ $('.active-box').hover(function(){
   TweenMax.to('.pause-text', 0.35, {autoAlpha: 0, y:0, transformOrigin:'50% 50%', ease:Back.easeIn});
 });
 
-var audioMp3 = new Audio();
+var audioMp3 = new Audio().autoplay;
 audioMp3.src = 'http://uk1.internet-radio.com:8251/stream';
 
 function playAudio(){
